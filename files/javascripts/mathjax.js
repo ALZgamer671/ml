@@ -7,10 +7,14 @@ window.MathJax = {
     displayMath: [
       ["\\[", "\\]"],
       ["$$", "$$"]
-    ]
+    ],
+    processEscapes: true,
+    processEnvironments: true
   },
 
   options: {
+    ignoreHtmlClass: ".*|",
+    processHtmlClass: "arithmatex",
     skipHtmlTags: [
       "script",
       "noscript",
@@ -23,5 +27,41 @@ window.MathJax = {
 };
 
 document$.subscribe(() => {
+  MathJax.startup.output.clearCache();
+  MathJax.typesetClear();
+  MathJax.texReset();
+  MathJax.typesetPromise();
+});window.MathJax = {
+  tex: {
+    inlineMath: [
+      ["\\(", "\\)"],
+      ["$", "$"]
+    ],
+    displayMath: [
+      ["\\[", "\\]"],
+      ["$$", "$$"]
+    ],
+    processEscapes: true,
+    processEnvironments: true
+  },
+
+  options: {
+    ignoreHtmlClass: ".*|",
+    processHtmlClass: "arithmatex",
+    skipHtmlTags: [
+      "script",
+      "noscript",
+      "style",
+      "textarea",
+      "pre",
+      "code"
+    ]
+  }
+};
+
+document$.subscribe(() => {
+  MathJax.startup.output.clearCache();
+  MathJax.typesetClear();
+  MathJax.texReset();
   MathJax.typesetPromise();
 });
