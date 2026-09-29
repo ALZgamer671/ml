@@ -1,0 +1,12 @@
+.md-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+}
+
+.arithmatex {
+  overflow-x: auto;
+  overflow-y: hidden;
+}

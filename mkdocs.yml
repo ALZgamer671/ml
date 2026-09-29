@@ -1,0 +1,62 @@
+site_name: Конспекты лекций
+site_description: Лекции и учебные материалы
+
+docs_dir: files
+
+theme:
+  name: material
+  language: ru
+
+  features:
+    - navigation.top
+    - navigation.tracking
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Тёмная тема
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Светлая тема
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+
+  - pymdownx.arithmatex:
+      generic: true
+
+  - pymdownx.highlight
+
+  - pymdownx.superfences
+
+  - pymdownx.details
+
+  - pymdownx.inlinehilite
+
+  - pymdownx.keys
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+
+extra_css:
+  - stylesheets/extra.css
