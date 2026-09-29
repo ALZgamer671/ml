@@ -9,6 +9,7 @@ theme:
   language: ru
 
   features:
+    - navigation.sections
     - navigation.top
     - navigation.tracking
     - navigation.expand
@@ -41,13 +42,9 @@ markdown_extensions:
       generic: true
 
   - pymdownx.highlight
-
   - pymdownx.superfences
-
   - pymdownx.details
-
   - pymdownx.inlinehilite
-
   - pymdownx.keys
 
   - pymdownx.tabbed:
